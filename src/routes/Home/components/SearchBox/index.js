@@ -9,14 +9,18 @@ import styles from "./SearchBoxStyles.js";
 export const SearchBox = ({getInputData, toggleSearchResultModal, getAddressPredictions, selectedAddress})=> {
 	const { selectedPickUp, selectedDropOff } = selectedAddress || {};
 	function handleInput(key, val){
-	
-		setTimeout(() => {
+		if(val)
+		{
 			getInputData({
 				key,
 				value:val
 			});
+		setTimeout(() => {
 			getAddressPredictions();
-		}, 200);
+		}, 500);
+		}
+	
+	
 
 	}
 	function focusSearch(val)

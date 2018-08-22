@@ -49,7 +49,7 @@ export function getCurrentLocation(){
 	}
 }
 
-// GET USER INPUT
+//GET USER INPUT
 
 export function getInputData(payload){
 	return{
@@ -57,7 +57,7 @@ export function getInputData(payload){
 		payload
 	}
 }
-// toggle search result modal
+//toggle search result modal
 export function toggleSearchResultModal(payload){
 	return{
 		type:TOGGLE_SEARCH_RESULT,
@@ -66,13 +66,15 @@ export function toggleSearchResultModal(payload){
 }
 
 
-// GET ADRESSES FROM GOOGLE PLACE
+//GET ADRESSES FROM GOOGLE PLACE
 
 export function getAddressPredictions(){
 	return(dispatch, store)=>{
-		const userInput = store().home.resultTypes.pickUp ? store().home.inputData.pickUp : store().home.inputData.dropOff;
-		setTimeout(function(){
-		RNGooglePlaces.getAutocompletePredictions(userInput
+		let userInput = store().home.resultTypes.pickUp ? store().home.inputData.pickUp : store().home.inputData.dropOff;
+		RNGooglePlaces.getAutocompletePredictions(userInput,
+			{
+				country:"VN"
+			}
 		)
 		.then(
 			function(results){
@@ -81,11 +83,11 @@ export function getAddressPredictions(){
 				payload:results
 			})
 		}
+
 		)
 		.catch(function(error){
 		 console.log(error.message)
 		});
-
 	};
 }
 
