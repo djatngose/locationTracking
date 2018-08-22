@@ -1,0 +1,51 @@
+{
+  "name": "LocationTracking",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "haversine": "^1.1.0",
+    "hoek": "^5.0.3",
+    "lodash": "^4.17.5",
+    "native-base": "^2.7.2",
+    "prop-types": "^15.6.1",
+    "pubnub": "^4.20.3",
+    "pubnub-react": "^1.2.0",
+    "react": "16.3.1",
+    "react-addons-update": "^15.5.2",
+    "react-native": "0.55.2",
+    "react-native-google-places": "^2.5.2",
+    "react-native-maps": "^0.21.0",
+    "react-native-router-flux": "^3.39.1",
+    "react-native-spinkit": "^1.0.3",
+    "react-native-star-rating": "^1.0.7",
+    "react-native-vector-icons": "^4.1.1",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-socket.io": "^1.4.0",
+    "redux-thunk": "^2.2.0",
+    "socket-io": "^1.0.0",
+    "socket.io-client": "^2.0.3",
+    "superagent": "^3.5.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "22.4.3",
+    "babel-preset-react-native": "4.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "22.4.3",
+    "react-test-renderer": "16.3.1",
+    "redux-logger": "^3.0.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
